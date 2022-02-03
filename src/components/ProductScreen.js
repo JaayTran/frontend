@@ -56,7 +56,18 @@ function ProductScreen(props) {
               </select>
             </li>
             <li>
-              Sides:{" "}
+              First Side:{""}
+              <select>
+                <option>Select</option>
+                <option>Corn</option>
+                <option>Potato</option>
+                <option>Brocolli</option>
+                <option>Lotus Root</option>
+                <option>Okra</option>
+              </select>
+            </li>
+            <li>
+              Second Side:{" "}
               <select>
                 <option>Select</option>
                 <option>Corn</option>
