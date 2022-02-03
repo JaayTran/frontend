@@ -15,9 +15,8 @@ export default function Product(props) {
         <div className="row">
           <div className="price">${product.price}</div>
           <div>
-            Status:
             {product.stock > 0 ? (
-              <span className="success">In Stock</span>
+              <span className="success">Available</span>
             ) : (
               <span className="danger">Unavailable</span>
             )}
