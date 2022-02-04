@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../App.css";
 import { useDispatch, useSelector } from "react-redux";
 import LoadingBox from "./LoadingBox";
 import MessageBox from "./MessageBox";

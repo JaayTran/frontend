@@ -1,15 +1,11 @@
 import React from "react";
-import "../../App.css";
 
 export default function About() {
   return (
     <>
       <h1 className="about">About Us</h1>;
       <div className="about-card">
-        <img
-          height="300px"
-          src="/images/img-seafood-party.jpg"
-        />
+        <img height="300px" src="/images/img-seafood-party.jpg" />
         <div className="about-desc">
           <h2 className="about-desc-h">Our Story & Mission</h2>
           <br />

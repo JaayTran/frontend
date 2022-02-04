@@ -1,5 +1,4 @@
 import React from "react";
-import "../../App.css";
 import { Link } from "react-router-dom";
 
 export default function ContactUs() {
@@ -40,19 +39,33 @@ export default function ContactUs() {
 
         <div className="contact-hours">
           <h2>Hours of Operation</h2>
-          <p>Monday <br /> Noon - 10:30 PM</p>
+          <p>
+            Monday <br /> Noon - 10:30 PM
+          </p>
           <br />
-          <p>Tuesday <br /> Noon - 10:30 PM</p>
+          <p>
+            Tuesday <br /> Noon - 10:30 PM
+          </p>
           <br />
-          <p>Wednesday <br /> Noon - 10:30 PM</p>
+          <p>
+            Wednesday <br /> Noon - 10:30 PM
+          </p>
           <br />
-          <p>Thursday <br /> Noon - 10:30 PM</p>
+          <p>
+            Thursday <br /> Noon - 10:30 PM
+          </p>
           <br />
-          <p>Friday <br /> Noon - 11 PM</p>
+          <p>
+            Friday <br /> Noon - 11 PM
+          </p>
           <br />
-          <p>Saturday <br /> Noon - 11 PM</p>
+          <p>
+            Saturday <br /> Noon - 11 PM
+          </p>
           <br />
-          <p>Sunday <br /> Noon - 10 PM</p>
+          <p>
+            Sunday <br /> Noon - 10 PM
+          </p>
           <br />
           <p></p>
         </div>

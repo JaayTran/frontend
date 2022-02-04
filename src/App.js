@@ -8,33 +8,27 @@ import Menu from "./components/pages/Menu";
 import ContactUs from "./components/pages/ContactUs";
 import Footer from "./components/Footer";
 import SimpleReactLightbox from "simple-react-lightbox";
-import store from "./store";
-import { Provider } from "react-redux";
 import CartScreen from "./components/pages/CartScreen";
 import OrderHomeScreen from "./components/pages/OrderHomeScreen";
 import ProductScreen from "./components/ProductScreen";
 
 function App() {
   return (
-    <>
-      <Provider store={store}>
-        <Router>
-          <Navbar />
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contactus" component={ContactUs} />
-            <Route path="/order" exact={true} component={OrderHomeScreen} />
-            <Route path="/cart/:id?" component={CartScreen} />
-            <Route path="/order/:id" component={ProductScreen} />
-            <SimpleReactLightbox>
-              <Route path="/menu" component={Menu} />
-            </SimpleReactLightbox>
-          </Switch>
-          <Footer />
-        </Router>
-      </Provider>
-    </>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/contactus" component={ContactUs} />
+        <Route path="/order" exact={true} component={OrderHomeScreen} />
+        <Route path="/cart/:id?" component={CartScreen} />
+        <Route path="/order/:id" component={ProductScreen} />
+        <SimpleReactLightbox>
+          <Route path="/menu" component={Menu} />
+        </SimpleReactLightbox>
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 

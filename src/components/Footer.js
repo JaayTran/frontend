@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import { Button } from "./Button";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -13,31 +12,31 @@ function Footer() {
               Robot Boil House
             </Link>
           </div>
-          <div className='footer-subscription'>
+          <div className="footer-subscription">
             <div className="footer-subscription">
               <p className="footer-subscription-heading">
                 Check out our Social Media Pages!
               </p>
-            <div class="social-icons">
-              <Link
-                class="social-icon-link facebook"
-                to={{ pathname: "https://www.facebook.com/robotboilhouse/" }}
-                target="_blank"
-                target="_blank"
-                aria-label="Facebook"
-              >
-                <i class="fab fa-facebook-f" />
-              </Link>
-              <Link
-                class="social-icon-link instagram"
-                to={{ pathname: "https://www.instagram.com/robotboilhouse/" }}
-                target="_blank"
-                target="_blank"
-                aria-label="Instagram"
-              >
-                <i class="fab fa-instagram" />
-              </Link>
-            </div>
+              <div class="social-icons">
+                <Link
+                  class="social-icon-link facebook"
+                  to={{ pathname: "https://www.facebook.com/robotboilhouse/" }}
+                  target="_blank"
+                  target="_blank"
+                  aria-label="Facebook"
+                >
+                  <i class="fab fa-facebook-f" />
+                </Link>
+                <Link
+                  class="social-icon-link instagram"
+                  to={{ pathname: "https://www.instagram.com/robotboilhouse/" }}
+                  target="_blank"
+                  target="_blank"
+                  aria-label="Instagram"
+                >
+                  <i class="fab fa-instagram" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
