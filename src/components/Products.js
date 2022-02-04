@@ -26,22 +26,3 @@ export default function Product(props) {
     </div>
   );
 }
-
-// {products.map((product) => (
-//     <li>
-//       <div className="product">
-//         <Link to={"/order/" + product._id}>
-//           <img
-//             className="product-img"
-//             src={product.image}
-//             alt="product"
-//           />
-//         </Link>
-//         <div className="product-name">
-//           <Link to={"/order/" + product._id}>{product.name}</Link>
-//         </div>
-//         <div className="product-type"> {product.type} </div>
-//         <div className="product-price"> ${product.price} </div>
-//       </div>
-//     </li>
-//   ))}

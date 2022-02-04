@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import Product from "../components/Products";
-import LoadingBox from "../components/LoadingBox";
-import MessageBox from "../components/MessageBox";
+import Product from "../Products";
+import LoadingBox from "../LoadingBox";
+import MessageBox from "../MessageBox";
 import { useDispatch, useSelector } from "react-redux";
-import { listProducts } from "../actions/productActions";
+import { listProducts } from "../../actions/productActions";
 
 function OrderHomeScreen() {
   const dispatch = useDispatch();

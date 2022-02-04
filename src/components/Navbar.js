@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "./Button";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "./Navbar.css";
 
 function Navbar() {
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
+
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -57,6 +60,23 @@ function Navbar() {
                 onClick={closeMobileMenu}
               >
                 Contact Us
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/cart" className="nav-links" onClick={closeMobileMenu}>
+                Cart
+                {cartItems.length > 0 && (
+                  <span className="badge">{cartItems.length}</span>
+                )}
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/sign-in"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Sign In
               </Link>
             </li>
           </ul>

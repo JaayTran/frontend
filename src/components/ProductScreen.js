@@ -43,55 +43,77 @@ export default function ProductScreen(props) {
                 <li>
                   Price: <b>${product.price}</b>
                 </li>
-
                 <li>Description: {product.description}</li>
               </ul>
             </div>
             <div className="details-action">
               <ul>
-                <li>Price: {product.price}</li>
                 <li>
-                  Flavour:{" "}
-                  <select>
-                    <option>Select</option>
-                    <option>Robot Blend</option>
-                    <option>Cajun</option>
-                    <option>Lemon Pepper</option>
-                    <option>Garlic Butter</option>
-                    <option>Thai Style</option>
-                  </select>
+                  <div className="row">
+                    <div>Price:</div>
+                    <div> {product.price}</div>
+                  </div>
                 </li>
                 <li>
-                  Spice Level:{" "}
-                  <select>
-                    <option>Select</option>
-                    <option>Non-Spicy</option>
-                    <option>Mild</option>
-                    <option>Medium</option>
-                    <option>Fire</option>
-                  </select>
+                  <div className="row">
+                    <div>Flavour: </div>
+                    <div>
+                      <select>
+                        <option>Select</option>
+                        <option>Robot Blend</option>
+                        <option>Cajun</option>
+                        <option>Lemon Pepper</option>
+                        <option>Garlic Butter</option>
+                        <option>Thai Style</option>
+                      </select>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div className="row">
+                    <div>Spice Level: </div>
+                    <div>
+                      <select>
+                        <option>Select</option>
+                        <option>Non-Spicy</option>
+                        <option>Mild</option>
+                        <option>Medium</option>
+                        <option>Fire</option>
+                      </select>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div className="row">
+                    <div>First Side: </div>
+                    <div>
+                      <select>
+                        <option>Select</option>
+                        <option>Corn</option>
+                        <option>Potato</option>
+                        <option>Brocolli</option>
+                        <option>Lotus Root</option>
+                        <option>Okra</option>
+                      </select>
+                    </div>
+                  </div>
                 </li>
                 <li>
-                  First Side:{""}
-                  <select>
-                    <option>Select</option>
-                    <option>Corn</option>
-                    <option>Potato</option>
-                    <option>Brocolli</option>
-                    <option>Lotus Root</option>
-                    <option>Okra</option>
-                  </select>
-                </li>
-                <li>
-                  Second Side:{" "}
-                  <select>
-                    <option>Select</option>
-                    <option>Corn</option>
-                    <option>Potato</option>
-                    <option>Brocolli</option>
-                    <option>Lotus Root</option>
-                    <option>Okra</option>
-                  </select>
+                  <div className="row">
+                    <div>Second Side: </div>
+                    <div>
+                      <select>
+                        <option>Select</option>
+                        <option>Corn</option>
+                        <option>Potato</option>
+                        <option>Brocolli</option>
+                        <option>Lotus Root</option>
+                        <option>Okra</option>
+                      </select>
+                    </div>
+                  </div>
                 </li>
                 {product.stock > 0 && (
                   <>
@@ -113,7 +135,10 @@ export default function ProductScreen(props) {
                       </div>
                     </li>
                     <li>
-                      <button onClick={addToCartHandler} className="button">
+                      <button
+                        onClick={addToCartHandler}
+                        className="button primary"
+                      >
                         Add to Cart
                       </button>
                     </li>
