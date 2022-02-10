@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
 import "./Navbar.css";
+import { signout } from "../actions/userActions";
 
 function Navbar() {
   const cart = useSelector((state) => state.cart);
@@ -12,6 +13,13 @@ function Navbar() {
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
+  const dispatch = useDispatch();
+  const signoutHandler = () => {
+    dispatch(signout());
+  };
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
@@ -71,13 +79,32 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="/sign-in"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Sign In
-              </Link>
+              {userInfo ? (
+                <div className="dropdown">
+                  <Link to="#" className="nav-links">
+                    {userInfo.name} <i className="fa fa-caret-down"></i>{" "}
+                  </Link>
+                  <ul className="dropdown-content">
+                    <li>
+                      <Link
+                        to="#signout"
+                        className="nav-links"
+                        onClick={signoutHandler}
+                      >
+                        Sign Out
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              ) : (
+                <Link
+                  to="/signin"
+                  className="nav-links"
+                  onClick={closeMobileMenu}
+                >
+                  Sign In
+                </Link>
+              )}
             </li>
           </ul>
         </div>

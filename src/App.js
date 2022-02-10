@@ -11,6 +11,8 @@ import SimpleReactLightbox from "simple-react-lightbox";
 import CartScreen from "./components/pages/CartScreen";
 import OrderHomeScreen from "./components/pages/OrderHomeScreen";
 import ProductScreen from "./components/ProductScreen";
+import SigninScreen from "./components/pages/SigninScreen";
+import RegisterScreen from "./components/pages/RegisterScreen.js";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/order" exact={true} component={OrderHomeScreen} />
         <Route path="/cart/:id?" component={CartScreen} />
         <Route path="/order/:id" component={ProductScreen} />
+        <Route path="/signin" component={SigninScreen} />
+        <Route path="/register" component={RegisterScreen} />
         <SimpleReactLightbox>
           <Route path="/menu" component={Menu} />
         </SimpleReactLightbox>
