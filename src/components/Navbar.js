@@ -85,6 +85,64 @@ function Navbar() {
                     {userInfo.name} <i className="fa fa-caret-down"></i>{" "}
                   </Link>
                   <ul className="dropdown-content">
+                    {userInfo && userInfo.isAdmin && (
+                      <div>
+                        <li>
+                          <Link
+                            to="/dashboard"
+                            className="nav-links"
+                            onClick={closeMobileMenu}
+                          >
+                            Dashboard
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/productlist"
+                            className="nav-links"
+                            onClick={closeMobileMenu}
+                          >
+                            Products
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/orderlist"
+                            className="nav-links"
+                            onClick={closeMobileMenu}
+                          >
+                            Orders
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            to="/userlist"
+                            className="nav-links"
+                            onClick={closeMobileMenu}
+                          >
+                            Users
+                          </Link>
+                        </li>
+                      </div>
+                    )}
+                    <li>
+                      <Link
+                        to="/profile"
+                        className="nav-links"
+                        onClick={closeMobileMenu}
+                      >
+                        User Profile
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/orderhistory"
+                        className="nav-links"
+                        onClick={closeMobileMenu}
+                      >
+                        Orders
+                      </Link>
+                    </li>
                     <li>
                       <Link
                         to="#signout"

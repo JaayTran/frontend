@@ -17,6 +17,11 @@ import ShippingAddressScreen from "./components/pages/ShippingAddressScreen";
 import PaymentMethodScreen from "./components/pages/PaymentMethodScreen";
 import PlaceOrderScreen from "./components/pages/PlaceOrderScreen";
 import OrderScreen from "./components/pages/OrderScreen";
+import OrderHistoryScreen from "./components/pages/OrderHistoryScreen";
+import ProfileScreen from "./components/pages/ProfileScreen";
+import PrivateRoute from "./components/PrivateRoute";
+import AdminRoute from "./components/AdminRoute";
+import ProductListScreen from "./components/pages/ProductListScreen";
 
 function App() {
   return (
@@ -35,6 +40,13 @@ function App() {
         <Route path="/payment" component={PaymentMethodScreen} />
         <Route path="/placeorder" component={PlaceOrderScreen} />
         <Route path="/orderdetails/:id" component={OrderScreen} />
+        <Route path="/orderhistory" component={OrderHistoryScreen} />
+        <Route path="/profile" component={ProfileScreen} />
+        <PrivateRoute path="/profile" component={ProfileScreen}></PrivateRoute>
+        <AdminRoute
+          path="/productlist"
+          component={ProductListScreen}
+        ></AdminRoute>
         <SimpleReactLightbox>
           <Route path="/menu" component={Menu} />
         </SimpleReactLightbox>
