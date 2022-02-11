@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import LoadingBox from "./LoadingBox";
-import MessageBox from "./MessageBox";
-import { detailsProduct } from "../actions/productActions";
+import LoadingBox from "../LoadingBox";
+import MessageBox from "../MessageBox";
+import { detailsProduct } from "../../actions/productActions";
 
 export default function ProductScreen(props) {
   const dispatch = useDispatch();

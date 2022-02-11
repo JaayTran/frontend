@@ -10,9 +10,13 @@ import Footer from "./components/Footer";
 import SimpleReactLightbox from "simple-react-lightbox";
 import CartScreen from "./components/pages/CartScreen";
 import OrderHomeScreen from "./components/pages/OrderHomeScreen";
-import ProductScreen from "./components/ProductScreen";
+import ProductScreen from "./components/pages/ProductScreen";
 import SigninScreen from "./components/pages/SigninScreen";
 import RegisterScreen from "./components/pages/RegisterScreen.js";
+import ShippingAddressScreen from "./components/pages/ShippingAddressScreen";
+import PaymentMethodScreen from "./components/pages/PaymentMethodScreen";
+import PlaceOrderScreen from "./components/pages/PlaceOrderScreen";
+import OrderScreen from "./components/pages/OrderScreen";
 
 function App() {
   return (
@@ -27,6 +31,10 @@ function App() {
         <Route path="/order/:id" component={ProductScreen} />
         <Route path="/signin" component={SigninScreen} />
         <Route path="/register" component={RegisterScreen} />
+        <Route path="/shipping" component={ShippingAddressScreen} />
+        <Route path="/payment" component={PaymentMethodScreen} />
+        <Route path="/placeorder" component={PlaceOrderScreen} />
+        <Route path="/orderdetails/:id" component={OrderScreen} />
         <SimpleReactLightbox>
           <Route path="/menu" component={Menu} />
         </SimpleReactLightbox>
