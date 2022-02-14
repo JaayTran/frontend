@@ -22,6 +22,7 @@ import ProfileScreen from "./components/pages/ProfileScreen";
 import PrivateRoute from "./components/PrivateRoute";
 import AdminRoute from "./components/AdminRoute";
 import ProductListScreen from "./components/pages/ProductListScreen";
+import ProductEditScreen from "./components/pages/ProductEditScreen";
 
 function App() {
   return (
@@ -34,7 +35,7 @@ function App() {
         <Route path="/order" exact={true} component={OrderHomeScreen} />
         <Route path="/cart/:id?" component={CartScreen} />
         <Route path="/order/:id" component={ProductScreen} />
-        <Route path="/signin" component={SigninScreen} />
+        <Route path="/signin" component={SigninScreen} exact />
         <Route path="/register" component={RegisterScreen} />
         <Route path="/shipping" component={ShippingAddressScreen} />
         <Route path="/payment" component={PaymentMethodScreen} />
@@ -42,6 +43,11 @@ function App() {
         <Route path="/orderdetails/:id" component={OrderScreen} />
         <Route path="/orderhistory" component={OrderHistoryScreen} />
         <Route path="/profile" component={ProfileScreen} />
+        <Route
+          path="/product/:id/edit"
+          component={ProductEditScreen}
+          exact
+        ></Route>
         <PrivateRoute path="/profile" component={ProfileScreen}></PrivateRoute>
         <AdminRoute
           path="/productlist"

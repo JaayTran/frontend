@@ -111,7 +111,7 @@ function Navbar() {
                             className="nav-links"
                             onClick={closeMobileMenu}
                           >
-                            Orders
+                            All Orders
                           </Link>
                         </li>
                         <li>
@@ -140,7 +140,7 @@ function Navbar() {
                         className="nav-links"
                         onClick={closeMobileMenu}
                       >
-                        Orders
+                        My Orders
                       </Link>
                     </li>
                     <li>
