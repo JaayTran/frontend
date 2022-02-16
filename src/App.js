@@ -23,6 +23,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import AdminRoute from "./components/AdminRoute";
 import ProductListScreen from "./components/pages/ProductListScreen";
 import ProductEditScreen from "./components/pages/ProductEditScreen";
+import OrderListScreen from "./components/pages/OrderListScreen";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <Route path="/orderdetails/:id" component={OrderScreen} />
         <Route path="/orderhistory" component={OrderHistoryScreen} />
         <Route path="/profile" component={ProfileScreen} />
+        <AdminRoute path="/orderlist" component={OrderListScreen}></AdminRoute>
         <Route
           path="/product/:id/edit"
           component={ProductEditScreen}
