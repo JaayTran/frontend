@@ -11,7 +11,7 @@ export default function ProductEditScreen(props) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [image, setImage] = useState("");
-  const [type, setCategory] = useState("");
+  const [category, setCategory] = useState("");
   const [stock, setCountInStock] = useState("");
   const [description, setDescription] = useState("");
 
@@ -37,7 +37,7 @@ export default function ProductEditScreen(props) {
       setName(product.name);
       setPrice(product.price);
       setImage(product.image);
-      setCategory(product.type);
+      setCategory(product.category);
       setCountInStock(product.stock);
       setDescription(product.description);
     }
@@ -51,7 +51,7 @@ export default function ProductEditScreen(props) {
         name,
         price,
         image,
-        type,
+        category,
         stock,
         description,
       })
@@ -140,12 +140,12 @@ export default function ProductEditScreen(props) {
               )}
             </div>
             <div>
-              <label htmlFor="category">Type</label>
+              <label htmlFor="category">Category</label>
               <input
                 id="category"
                 type="text"
                 placeholder="Enter category"
-                value={type}
+                value={category}
                 onChange={(e) => setCategory(e.target.value)}
               ></input>
             </div>
