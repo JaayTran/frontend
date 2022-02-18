@@ -47,75 +47,79 @@ export default function ProductScreen(props) {
             </div>
             <div className="details-action">
               <ul>
-                <li>
-                  <div className="row">
-                    <div>Price:</div>
-                    <div> {product.price}</div>
-                  </div>
-                </li>
-                <li>
-                  <div className="row">
-                    <div>Flavour: </div>
-                    <div>
-                      <select>
-                        <option>Select</option>
-                        <option>Robot Blend</option>
-                        <option>Cajun</option>
-                        <option>Lemon Pepper</option>
-                        <option>Garlic Butter</option>
-                        <option>Thai Style</option>
-                      </select>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div className="row">
-                    <div>Spice Level: </div>
-                    <div>
-                      <select>
-                        <option>Select</option>
-                        <option>Non-Spicy</option>
-                        <option>Mild</option>
-                        <option>Medium</option>
-                        <option>Fire</option>
-                      </select>
-                    </div>
-                  </div>
-                </li>
-
-                <li>
-                  <div className="row">
-                    <div>First Side: </div>
-                    <div>
-                      <select>
-                        <option>Select</option>
-                        <option>Corn</option>
-                        <option>Potato</option>
-                        <option>Brocolli</option>
-                        <option>Lotus Root</option>
-                        <option>Okra</option>
-                      </select>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="row">
-                    <div>Second Side: </div>
-                    <div>
-                      <select>
-                        <option>Select</option>
-                        <option>Corn</option>
-                        <option>Potato</option>
-                        <option>Brocolli</option>
-                        <option>Lotus Root</option>
-                        <option>Okra</option>
-                      </select>
-                    </div>
-                  </div>
-                </li>
+                {product.stock == 0 && (
+                  <>
+                    <li>
+                      <div className="row">
+                        <div className="danger">Item Unavailable</div>
+                      </div>
+                    </li>
+                  </>
+                )}
                 {product.stock > 0 && (
                   <>
+                    <li>
+                      <div className="row">
+                        <div>Flavour: </div>
+                        <div>
+                          <select>
+                            <option>Select</option>
+                            <option>Robot Blend</option>
+                            <option>Cajun</option>
+                            <option>Lemon Pepper</option>
+                            <option>Garlic Butter</option>
+                            <option>Thai Style</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div className="row">
+                        <div>Spice Level: </div>
+                        <div>
+                          <select>
+                            <option>Select</option>
+                            <option>Non-Spicy</option>
+                            <option>Mild</option>
+                            <option>Medium</option>
+                            <option>Fire</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div className="row">
+                        <div>First Side: </div>
+                        <div>
+                          <select>
+                            <option>Select</option>
+                            <option>Corn</option>
+                            <option>Potato</option>
+                            <option>Brocolli</option>
+                            <option>Lotus Root</option>
+                            <option>Okra</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="row">
+                        <div>Second Side: </div>
+                        <div>
+                          <select>
+                            <option>Select</option>
+                            <option>Corn</option>
+                            <option>Potato</option>
+                            <option>Brocolli</option>
+                            <option>Lotus Root</option>
+                            <option>Okra</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+
                     <li>
                       <div className="row">
                         <div>Qty:</div>
