@@ -38,7 +38,7 @@ export default function ProductScreen(props) {
                 <li>
                   <h4>{product.name}</h4>
                 </li>
-                <li>{product.type}</li>
+                <li>{product.category}</li>
                 <li>
                   Price: <b>${product.price}</b>
                 </li>
