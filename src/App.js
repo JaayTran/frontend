@@ -26,7 +26,6 @@ import ProductEditScreen from "./components/pages/ProductEditScreen";
 import OrderListScreen from "./components/pages/OrderListScreen";
 import UserListScreen from "./components/pages/UserListScreen";
 import UserEditScreen from "./components/pages/UserEditScreen";
-import ProductCategories from "./components/pages/ProductCategories";
 
 function App() {
   return (
@@ -47,11 +46,6 @@ function App() {
         <Route path="/orderdetails/:id" component={OrderScreen} />
         <Route path="/orderhistory" component={OrderHistoryScreen} />
         <Route path="/profile" component={ProfileScreen} />
-        <Route
-          path="/order/category/:category?"
-          component={ProductCategories}
-          exact
-        ></Route>
         <AdminRoute path="/orderlist" component={OrderListScreen} />
         <AdminRoute path="/userlist" component={UserListScreen} />
         <AdminRoute
