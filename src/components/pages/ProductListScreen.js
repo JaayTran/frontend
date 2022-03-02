@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   createProduct,
-  listProducts,
+  listAllProducts,
   deleteProduct,
 } from "../../actions/productActions";
 import LoadingBox from "../LoadingBox";
@@ -40,7 +40,7 @@ export default function ProductListScreen(props) {
     if (successDelete) {
       dispatch({ type: PRODUCT_DELETE_RESET });
     }
-    dispatch(listProducts());
+    dispatch(listAllProducts());
   }, [createdProduct, dispatch, props.history, successCreate, successDelete]);
 
   const deleteHandler = (product) => {

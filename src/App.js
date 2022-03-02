@@ -26,7 +26,7 @@ import ProductEditScreen from "./components/pages/ProductEditScreen";
 import OrderListScreen from "./components/pages/OrderListScreen";
 import UserListScreen from "./components/pages/UserListScreen";
 import UserEditScreen from "./components/pages/UserEditScreen";
-
+import SearchScreen from "./components/pages/SearchScreen";
 function App() {
   return (
     <Router>
@@ -48,6 +48,16 @@ function App() {
         <Route path="/profile" component={ProfileScreen} />
         <AdminRoute path="/orderlist" component={OrderListScreen} />
         <AdminRoute path="/userlist" component={UserListScreen} />
+        <Route
+          path="/search/category/:category"
+          component={SearchScreen}
+          exact
+        ></Route>
+        <Route
+          path="/search/category/:category/name/:name"
+          component={SearchScreen}
+          exact
+        ></Route>
         <AdminRoute
           path="/user/:id/edit"
           component={UserEditScreen}
