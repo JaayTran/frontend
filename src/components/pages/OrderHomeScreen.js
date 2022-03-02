@@ -32,7 +32,7 @@ function OrderHomeScreen() {
     <>
       <ul className="categories">
         <li>
-          <strong>Categories</strong>
+          <h3>Choose your category</h3>
         </li>
         {loadingCategories ? (
           <LoadingBox></LoadingBox>
