@@ -22,13 +22,13 @@ function OrderHomeScreen() {
         <div>
           <h3>Menu Catergories</h3>
           <ul>
-            <a href="index.html">Appetizer//</a>
-            <a href="index.html">Main//</a>
-            <a href="index.html">Platter//</a>
-            <a href="index.html">Tacos, Wings, Rice//</a>
-            <a href="index.html">Combos//</a>
-            <a href="index.html">Dessert//</a>
-            <a href="index.html">Drinks</a>
+            <button>Appetizer</button>
+            <button>Main</button>
+            <button>Platter</button>
+            <button>Tacos, Wings, Rice</button>
+            <button>Combos</button>
+            <button>Dessert</button>
+            <button>Drinks</button>
           </ul>
           <div className="row center">
             {products.map((product) => (

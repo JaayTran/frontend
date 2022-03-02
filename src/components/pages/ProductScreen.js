@@ -58,68 +58,103 @@ export default function ProductScreen(props) {
                 )}
                 {product.stock > 0 && (
                   <>
-                    <li>
-                      <div className="row">
-                        <div>Flavour: </div>
-                        <div>
-                          <select>
-                            <option>Select</option>
-                            <option>Robot Blend</option>
-                            <option>Cajun</option>
-                            <option>Lemon Pepper</option>
-                            <option>Garlic Butter</option>
-                            <option>Thai Style</option>
-                          </select>
-                        </div>
+                    {product.category === "Wings" && (
+                      <div>
+                        <li>
+                          <div className="row">
+                            <div>Flavour: </div>
+                            <div>
+                              <select>
+                                <option>Select</option>
+                                <option>BBQ</option>
+                                <option>Honey Garlic</option>
+                                <option>Buffalo</option>
+                                <option>Cajun</option>
+                              </select>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="row">
+                            <div>Fries: </div>
+                            <div>
+                              <select>
+                                <option>Select</option>
+                                <option>Regular</option>
+                                <option>Cajun</option>
+                              </select>
+                            </div>
+                          </div>
+                        </li>
                       </div>
-                    </li>
+                    )}
+                    {(product.category === "Boil" ||
+                      product.category === "Platter" ||
+                      product.category === "Combo") && (
+                      <div>
+                        <li>
+                          <div className="row">
+                            <div>Flavour: </div>
+                            <div>
+                              <select>
+                                <option>Select</option>
+                                <option>Robot Blend</option>
+                                <option>Cajun</option>
+                                <option>Lemon Pepper</option>
+                                <option>Garlic Butter</option>
+                                <option>Thai Style</option>
+                              </select>
+                            </div>
+                          </div>
+                        </li>
 
-                    <li>
-                      <div className="row">
-                        <div>Spice Level: </div>
-                        <div>
-                          <select>
-                            <option>Select</option>
-                            <option>Non-Spicy</option>
-                            <option>Mild</option>
-                            <option>Medium</option>
-                            <option>Fire</option>
-                          </select>
-                        </div>
-                      </div>
-                    </li>
+                        <li>
+                          <div className="row">
+                            <div>Spice Level: </div>
+                            <div>
+                              <select>
+                                <option>Select</option>
+                                <option>Non-Spicy</option>
+                                <option>Mild</option>
+                                <option>Medium</option>
+                                <option>Fire</option>
+                              </select>
+                            </div>
+                          </div>
+                        </li>
 
-                    <li>
-                      <div className="row">
-                        <div>First Side: </div>
-                        <div>
-                          <select>
-                            <option>Select</option>
-                            <option>Corn</option>
-                            <option>Potato</option>
-                            <option>Brocolli</option>
-                            <option>Lotus Root</option>
-                            <option>Okra</option>
-                          </select>
-                        </div>
+                        <li>
+                          <div className="row">
+                            <div>First Side: </div>
+                            <div>
+                              <select>
+                                <option>Select</option>
+                                <option>Corn</option>
+                                <option>Potato</option>
+                                <option>Brocolli</option>
+                                <option>Lotus Root</option>
+                                <option>Okra</option>
+                              </select>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="row">
+                            <div>Second Side: </div>
+                            <div>
+                              <select>
+                                <option>Select</option>
+                                <option>Corn</option>
+                                <option>Potato</option>
+                                <option>Brocolli</option>
+                                <option>Lotus Root</option>
+                                <option>Okra</option>
+                              </select>
+                            </div>
+                          </div>
+                        </li>
                       </div>
-                    </li>
-                    <li>
-                      <div className="row">
-                        <div>Second Side: </div>
-                        <div>
-                          <select>
-                            <option>Select</option>
-                            <option>Corn</option>
-                            <option>Potato</option>
-                            <option>Brocolli</option>
-                            <option>Lotus Root</option>
-                            <option>Okra</option>
-                          </select>
-                        </div>
-                      </div>
-                    </li>
-
+                    )}
                     <li>
                       <div className="row">
                         <div>Qty:</div>
