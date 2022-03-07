@@ -150,14 +150,17 @@ export default function ProductEditScreen(props) {
               ></input>
             </div>
             <div>
-              <label htmlFor="countInStock">Items in Stock</label>
-              <input
+              <label htmlFor="countInStock">Product Availability</label>
+              <select
                 id="countInStock"
                 type="text"
                 placeholder="Enter countInStock"
                 value={stock}
                 onChange={(e) => setCountInStock(e.target.value)}
-              ></input>
+              >
+                <option value="10">Yes</option>
+                <option value="0">No</option>
+              </select>
             </div>
             <div>
               <label htmlFor="description">Description</label>
