@@ -27,6 +27,8 @@ import OrderListScreen from "./components/pages/OrderListScreen";
 import UserListScreen from "./components/pages/UserListScreen";
 import UserEditScreen from "./components/pages/UserEditScreen";
 import SearchScreen from "./components/pages/SearchScreen";
+import DashboardScreen from "./components/pages/DashboardScreen";
+
 function App() {
   return (
     <Router>
@@ -46,32 +48,23 @@ function App() {
         <Route path="/orderdetails/:id" component={OrderScreen} />
         <Route path="/orderhistory" component={OrderHistoryScreen} />
         <Route path="/profile" component={ProfileScreen} />
-        <AdminRoute path="/orderlist" component={OrderListScreen} />
-        <AdminRoute path="/userlist" component={UserListScreen} />
+        <Route path="/product/:id/edit" component={ProductEditScreen} exact />
         <Route
           path="/search/category/:category"
           component={SearchScreen}
           exact
-        ></Route>
+        />
         <Route
           path="/search/category/:category/name/:name"
           component={SearchScreen}
           exact
-        ></Route>
-        <AdminRoute
-          path="/user/:id/edit"
-          component={UserEditScreen}
-        ></AdminRoute>
-        <Route
-          path="/product/:id/edit"
-          component={ProductEditScreen}
-          exact
-        ></Route>
-        <PrivateRoute path="/profile" component={ProfileScreen}></PrivateRoute>
-        <AdminRoute
-          path="/productlist"
-          component={ProductListScreen}
-        ></AdminRoute>
+        />
+        <AdminRoute path="/orderlist" component={OrderListScreen} />
+        <AdminRoute path="/userlist" component={UserListScreen} />
+        <AdminRoute path="/user/:id/edit" component={UserEditScreen} />
+        <AdminRoute path="/productlist" component={ProductListScreen} />
+        <AdminRoute path="/dashboard" component={DashboardScreen} />
+        <PrivateRoute path="/profile" component={ProfileScreen} />
         <SimpleReactLightbox>
           <Route path="/menu" component={Menu} />
         </SimpleReactLightbox>

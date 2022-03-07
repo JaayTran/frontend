@@ -65,7 +65,7 @@ export default function ProductScreen(props) {
                             <div>Flavour: </div>
                             <div>
                               <select>
-                                <option>Select</option>
+                                <option selected disabled hidden />
                                 <option>BBQ</option>
                                 <option>Honey Garlic</option>
                                 <option>Buffalo</option>
@@ -79,9 +79,25 @@ export default function ProductScreen(props) {
                             <div>Fries: </div>
                             <div>
                               <select>
-                                <option>Select</option>
+                                <option selected disabled hidden />
                                 <option>Regular</option>
                                 <option>Cajun</option>
+                              </select>
+                            </div>
+                          </div>
+                        </li>
+                      </div>
+                    )}
+                    {product.category === "Rice" && (
+                      <div>
+                        <li>
+                          <div className="row">
+                            <div>Protein: </div>
+                            <div>
+                              <select>
+                                <option selected disabled hidden />
+                                <option>Chicken</option>
+                                <option>Seafood</option>
                               </select>
                             </div>
                           </div>
@@ -97,7 +113,7 @@ export default function ProductScreen(props) {
                             <div>Flavour: </div>
                             <div>
                               <select>
-                                <option>Select</option>
+                                <option selected disabled hidden />
                                 <option>Robot Blend</option>
                                 <option>Cajun</option>
                                 <option>Lemon Pepper</option>
@@ -113,7 +129,7 @@ export default function ProductScreen(props) {
                             <div>Spice Level: </div>
                             <div>
                               <select>
-                                <option>Select</option>
+                                <option selected disabled hidden />
                                 <option>Non-Spicy</option>
                                 <option>Mild</option>
                                 <option>Medium</option>
@@ -128,7 +144,7 @@ export default function ProductScreen(props) {
                             <div>First Side: </div>
                             <div>
                               <select>
-                                <option>Select</option>
+                                <option selected disabled hidden />
                                 <option>Corn</option>
                                 <option>Potato</option>
                                 <option>Brocolli</option>
@@ -143,7 +159,7 @@ export default function ProductScreen(props) {
                             <div>Second Side: </div>
                             <div>
                               <select>
-                                <option>Select</option>
+                                <option selected disabled hidden />
                                 <option>Corn</option>
                                 <option>Potato</option>
                                 <option>Brocolli</option>
