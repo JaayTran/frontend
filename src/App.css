@@ -5,6 +5,13 @@
   font-family: "Verdana", Verdana;
 }
 
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .contact-us {
   background-image: url("images/img-food-1.jpg");
   background-position: center;
