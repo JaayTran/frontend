@@ -32,6 +32,7 @@ import DashboardScreen from "./components/pages/DashboardScreen";
 function App() {
   return (
     <Router>
+    <div className="flex-wrapper">
       <Navbar />
       <Switch>
         <Route path="/" exact component={Home} />
@@ -70,6 +71,7 @@ function App() {
         </SimpleReactLightbox>
       </Switch>
       <Footer />
+     </div>
     </Router>
   );
 }
